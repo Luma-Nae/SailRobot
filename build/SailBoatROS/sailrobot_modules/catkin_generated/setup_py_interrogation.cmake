@@ -1,0 +1,6 @@
+set(sailrobot_modules_SETUP_PY_VERSION "0.0.0")
+set(sailrobot_modules_SETUP_PY_SCRIPTS "")
+set(sailrobot_modules_SETUP_PY_PACKAGES "libnmea_navsat_driver")
+set(sailrobot_modules_SETUP_PY_PACKAGE_DIRS "src/libnmea_navsat_driver")
+set(sailrobot_modules_SETUP_PY_MODULES "")
+set(sailrobot_modules_SETUP_PY_MODULE_DIRS "")

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="80c049f5-b4b3-454e-af66-6f1e24e3a0f0" name="boat_Rpi" url="http://192.168.42.73">
-        <fileTransfer host="192.168.42.73" port="22" rootFolder="/home/sailboat/catkin_ws" accessType="SFTP">
+      <webServer id="80c049f5-b4b3-454e-af66-6f1e24e3a0f0" name="boat_Rpi" url="http://192.168.43.72">
+        <fileTransfer host="192.168.43.72" port="22" rootFolder="/home/sailboat/catkin_ws" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

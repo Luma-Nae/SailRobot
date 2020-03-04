@@ -1,0 +1,2 @@
+SailBoatROS/sailrobot:SailBoatROS/sailrobot_custom_msg:SailBoatROS/sailrobot_modules
+-DCATKIN_DEVEL_PREFIX=/home/sailboat/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/sailboat/catkin_ws/install -G Unix Makefiles

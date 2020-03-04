@@ -1,0 +1,8 @@
+prefix=/home/sailboat/catkin_ws/devel
+
+Name: sailrobot_modules
+Description: Description of sailrobot_modules
+Version: 0.0.0
+Cflags: -I/home/sailboat/catkin_ws/src/SailBoatROS/sailrobot_modules/include
+Libs: -L/home/sailboat/catkin_ws/devel/lib 
+Requires: 
