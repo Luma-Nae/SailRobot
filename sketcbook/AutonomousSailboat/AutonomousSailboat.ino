@@ -180,7 +180,7 @@ void loop() {
 
   Sailboat::Instance()->communicateData();
   Sailboat::Instance()->Control();
-
+  //Sailboat::Instance()->publishMsg("ROS messsage Test");
 
   nh.spinOnce();
   delay(4);

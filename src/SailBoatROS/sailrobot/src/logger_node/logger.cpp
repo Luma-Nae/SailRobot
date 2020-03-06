@@ -16,6 +16,8 @@ void Data_logger::setup(ros::NodeHandle *n) {
     outfile << "lat, long, alt, speed, time" << std::endl;
     outfile.close();
 
+    arduino_debug = n->advertise<std_msgs::String>("/arduino_debug", 10);
+
 }
 
 bool Data_logger::loopUnpublished() {
@@ -42,11 +44,22 @@ bool Data_logger::loopUnpublished() {
     outfile << lat << ", " << lon << ", " << alt << ", " << speed << ", " << time << ", " << tm;
     outfile.close();
 
-    return true;
+
+
+    return false;
 }
 
 geometry_msgs::Twist Data_logger::control() {
     geometry_msgs::Twist cmd;
+
+    cmd.angular.x = 1;
+
+
+
+    std_msgs::String msg;
+
+    msg.data = "Debug daga";
+    arduino_debug.publish(msg);
 
     return cmd;
 }

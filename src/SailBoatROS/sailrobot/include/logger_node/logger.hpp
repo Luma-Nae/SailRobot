@@ -16,6 +16,7 @@ namespace Sailboat {
 
     private:
         std::ofstream outfile;
+        ros::Publisher arduino_debug;
     };
 }
 #endif
