@@ -181,6 +181,9 @@ target_link_libraries(relay ${catkin_LIBRARIES})
 add_executable(logger ${basic_source} src/logger_node/logger_node.cpp src/logger_node/logger.cpp)
 target_link_libraries(logger ${catkin_LIBRARIES})
 
+add_executable(data_collector ${basic_source} src/data_collector_node/data_collector_node.cpp src/data_collector_node/data_collector.cpp)
+target_link_libraries(data_collector ${catkin_LIBRARIES})
+
 #add_executable(usb_test ${basic_source} src/p4-group-nodes/readusb.cpp)
 #target_link_libraries(usb_test ${catkin_LIBRARIES})
 
@@ -252,3 +255,4 @@ target_link_libraries(displayBoat ${catkin_LIBRARIES})
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+

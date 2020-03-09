@@ -1182,19 +1182,6 @@ visualization_msgs_generate_messages_cpp/fast:
 .PHONY : visualization_msgs_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named line_following
-
-# Build rule for target.
-line_following: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 line_following
-.PHONY : line_following
-
-# fast build rule for target.
-line_following/fast:
-	$(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/line_following.dir/build.make SailBoatROS/sailrobot/CMakeFiles/line_following.dir/build
-.PHONY : line_following/fast
-
-#=============================================================================
 # Target rules for targets named logger
 
 # Build rule for target.
@@ -1284,6 +1271,32 @@ visualization_msgs_generate_messages_nodejs: cmake_check_build_system
 visualization_msgs_generate_messages_nodejs/fast:
 	$(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build.make SailBoatROS/sailrobot/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build
 .PHONY : visualization_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named line_following
+
+# Build rule for target.
+line_following: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 line_following
+.PHONY : line_following
+
+# fast build rule for target.
+line_following/fast:
+	$(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/line_following.dir/build.make SailBoatROS/sailrobot/CMakeFiles/line_following.dir/build
+.PHONY : line_following/fast
+
+#=============================================================================
+# Target rules for targets named data_collector
+
+# Build rule for target.
+data_collector: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 data_collector
+.PHONY : data_collector
+
+# fast build rule for target.
+data_collector/fast:
+	$(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/build.make SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/build
+.PHONY : data_collector/fast
 
 #=============================================================================
 # Target rules for targets named tf2_msgs_generate_messages_cpp
@@ -1571,7 +1584,6 @@ help:
 	@echo "... tf_generate_messages_nodejs"
 	@echo "... user_test"
 	@echo "... visualization_msgs_generate_messages_cpp"
-	@echo "... line_following"
 	@echo "... logger"
 	@echo "... tf_generate_messages_lisp"
 	@echo "... tf2_msgs_generate_messages_eus"
@@ -1579,6 +1591,8 @@ help:
 	@echo "... visualization_msgs_generate_messages_py"
 	@echo "... visualization_msgs_generate_messages_lisp"
 	@echo "... visualization_msgs_generate_messages_nodejs"
+	@echo "... line_following"
+	@echo "... data_collector"
 	@echo "... tf2_msgs_generate_messages_cpp"
 	@echo "... line_following_long"
 	@echo "... tf2_msgs_generate_messages_lisp"

@@ -80,17 +80,6 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -101,6 +90,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
@@ -333,21 +333,6 @@ visualization_msgs_generate_messages_cpp/fast:
 .PHONY : visualization_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
-SailBoatROS/sailrobot/CMakeFiles/line_following.dir/rule:
-	cd /home/sailboat/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 SailBoatROS/sailrobot/CMakeFiles/line_following.dir/rule
-.PHONY : SailBoatROS/sailrobot/CMakeFiles/line_following.dir/rule
-
-# Convenience name for target.
-line_following: SailBoatROS/sailrobot/CMakeFiles/line_following.dir/rule
-
-.PHONY : line_following
-
-# fast build rule for target.
-line_following/fast:
-	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/line_following.dir/build.make SailBoatROS/sailrobot/CMakeFiles/line_following.dir/build
-.PHONY : line_following/fast
-
-# Convenience name for target.
 SailBoatROS/sailrobot/CMakeFiles/logger.dir/rule:
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 SailBoatROS/sailrobot/CMakeFiles/logger.dir/rule
 .PHONY : SailBoatROS/sailrobot/CMakeFiles/logger.dir/rule
@@ -451,6 +436,36 @@ visualization_msgs_generate_messages_nodejs: SailBoatROS/sailrobot/CMakeFiles/vi
 visualization_msgs_generate_messages_nodejs/fast:
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build.make SailBoatROS/sailrobot/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build
 .PHONY : visualization_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+SailBoatROS/sailrobot/CMakeFiles/line_following.dir/rule:
+	cd /home/sailboat/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 SailBoatROS/sailrobot/CMakeFiles/line_following.dir/rule
+.PHONY : SailBoatROS/sailrobot/CMakeFiles/line_following.dir/rule
+
+# Convenience name for target.
+line_following: SailBoatROS/sailrobot/CMakeFiles/line_following.dir/rule
+
+.PHONY : line_following
+
+# fast build rule for target.
+line_following/fast:
+	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/line_following.dir/build.make SailBoatROS/sailrobot/CMakeFiles/line_following.dir/build
+.PHONY : line_following/fast
+
+# Convenience name for target.
+SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/rule:
+	cd /home/sailboat/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/rule
+.PHONY : SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/rule
+
+# Convenience name for target.
+data_collector: SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/rule
+
+.PHONY : data_collector
+
+# fast build rule for target.
+data_collector/fast:
+	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/build.make SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/build
+.PHONY : data_collector/fast
 
 # Convenience name for target.
 SailBoatROS/sailrobot/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
@@ -739,9 +754,10 @@ src/controller.o: src/controller.cpp.o
 src/controller.cpp.o:
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/simuBoat.dir/build.make SailBoatROS/sailrobot/CMakeFiles/simuBoat.dir/src/controller.cpp.o
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/user_test.dir/build.make SailBoatROS/sailrobot/CMakeFiles/user_test.dir/src/controller.cpp.o
-	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/line_following.dir/build.make SailBoatROS/sailrobot/CMakeFiles/line_following.dir/src/controller.cpp.o
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/logger.dir/build.make SailBoatROS/sailrobot/CMakeFiles/logger.dir/src/controller.cpp.o
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/transform_broadcaster.dir/build.make SailBoatROS/sailrobot/CMakeFiles/transform_broadcaster.dir/src/controller.cpp.o
+	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/line_following.dir/build.make SailBoatROS/sailrobot/CMakeFiles/line_following.dir/src/controller.cpp.o
+	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/build.make SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/src/controller.cpp.o
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/line_following_long.dir/build.make SailBoatROS/sailrobot/CMakeFiles/line_following_long.dir/src/controller.cpp.o
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/potential_field.dir/build.make SailBoatROS/sailrobot/CMakeFiles/potential_field.dir/src/controller.cpp.o
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/waypoint_follower.dir/build.make SailBoatROS/sailrobot/CMakeFiles/waypoint_follower.dir/src/controller.cpp.o
@@ -761,9 +777,10 @@ src/controller.i: src/controller.cpp.i
 src/controller.cpp.i:
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/simuBoat.dir/build.make SailBoatROS/sailrobot/CMakeFiles/simuBoat.dir/src/controller.cpp.i
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/user_test.dir/build.make SailBoatROS/sailrobot/CMakeFiles/user_test.dir/src/controller.cpp.i
-	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/line_following.dir/build.make SailBoatROS/sailrobot/CMakeFiles/line_following.dir/src/controller.cpp.i
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/logger.dir/build.make SailBoatROS/sailrobot/CMakeFiles/logger.dir/src/controller.cpp.i
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/transform_broadcaster.dir/build.make SailBoatROS/sailrobot/CMakeFiles/transform_broadcaster.dir/src/controller.cpp.i
+	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/line_following.dir/build.make SailBoatROS/sailrobot/CMakeFiles/line_following.dir/src/controller.cpp.i
+	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/build.make SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/src/controller.cpp.i
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/line_following_long.dir/build.make SailBoatROS/sailrobot/CMakeFiles/line_following_long.dir/src/controller.cpp.i
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/potential_field.dir/build.make SailBoatROS/sailrobot/CMakeFiles/potential_field.dir/src/controller.cpp.i
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/waypoint_follower.dir/build.make SailBoatROS/sailrobot/CMakeFiles/waypoint_follower.dir/src/controller.cpp.i
@@ -783,9 +800,10 @@ src/controller.s: src/controller.cpp.s
 src/controller.cpp.s:
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/simuBoat.dir/build.make SailBoatROS/sailrobot/CMakeFiles/simuBoat.dir/src/controller.cpp.s
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/user_test.dir/build.make SailBoatROS/sailrobot/CMakeFiles/user_test.dir/src/controller.cpp.s
-	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/line_following.dir/build.make SailBoatROS/sailrobot/CMakeFiles/line_following.dir/src/controller.cpp.s
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/logger.dir/build.make SailBoatROS/sailrobot/CMakeFiles/logger.dir/src/controller.cpp.s
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/transform_broadcaster.dir/build.make SailBoatROS/sailrobot/CMakeFiles/transform_broadcaster.dir/src/controller.cpp.s
+	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/line_following.dir/build.make SailBoatROS/sailrobot/CMakeFiles/line_following.dir/src/controller.cpp.s
+	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/build.make SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/src/controller.cpp.s
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/line_following_long.dir/build.make SailBoatROS/sailrobot/CMakeFiles/line_following_long.dir/src/controller.cpp.s
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/potential_field.dir/build.make SailBoatROS/sailrobot/CMakeFiles/potential_field.dir/src/controller.cpp.s
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/waypoint_follower.dir/build.make SailBoatROS/sailrobot/CMakeFiles/waypoint_follower.dir/src/controller.cpp.s
@@ -796,6 +814,60 @@ src/controller.cpp.s:
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/relay.dir/build.make SailBoatROS/sailrobot/CMakeFiles/relay.dir/src/controller.cpp.s
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/identification_calc.dir/build.make SailBoatROS/sailrobot/CMakeFiles/identification_calc.dir/src/controller.cpp.s
 .PHONY : src/controller.cpp.s
+
+src/data_collector_node/data_collector.o: src/data_collector_node/data_collector.cpp.o
+
+.PHONY : src/data_collector_node/data_collector.o
+
+# target to build an object file
+src/data_collector_node/data_collector.cpp.o:
+	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/build.make SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/src/data_collector_node/data_collector.cpp.o
+.PHONY : src/data_collector_node/data_collector.cpp.o
+
+src/data_collector_node/data_collector.i: src/data_collector_node/data_collector.cpp.i
+
+.PHONY : src/data_collector_node/data_collector.i
+
+# target to preprocess a source file
+src/data_collector_node/data_collector.cpp.i:
+	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/build.make SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/src/data_collector_node/data_collector.cpp.i
+.PHONY : src/data_collector_node/data_collector.cpp.i
+
+src/data_collector_node/data_collector.s: src/data_collector_node/data_collector.cpp.s
+
+.PHONY : src/data_collector_node/data_collector.s
+
+# target to generate assembly for a file
+src/data_collector_node/data_collector.cpp.s:
+	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/build.make SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/src/data_collector_node/data_collector.cpp.s
+.PHONY : src/data_collector_node/data_collector.cpp.s
+
+src/data_collector_node/data_collector_node.o: src/data_collector_node/data_collector_node.cpp.o
+
+.PHONY : src/data_collector_node/data_collector_node.o
+
+# target to build an object file
+src/data_collector_node/data_collector_node.cpp.o:
+	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/build.make SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/src/data_collector_node/data_collector_node.cpp.o
+.PHONY : src/data_collector_node/data_collector_node.cpp.o
+
+src/data_collector_node/data_collector_node.i: src/data_collector_node/data_collector_node.cpp.i
+
+.PHONY : src/data_collector_node/data_collector_node.i
+
+# target to preprocess a source file
+src/data_collector_node/data_collector_node.cpp.i:
+	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/build.make SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/src/data_collector_node/data_collector_node.cpp.i
+.PHONY : src/data_collector_node/data_collector_node.cpp.i
+
+src/data_collector_node/data_collector_node.s: src/data_collector_node/data_collector_node.cpp.s
+
+.PHONY : src/data_collector_node/data_collector_node.s
+
+# target to generate assembly for a file
+src/data_collector_node/data_collector_node.cpp.s:
+	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/build.make SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/src/data_collector_node/data_collector_node.cpp.s
+.PHONY : src/data_collector_node/data_collector_node.cpp.s
 
 src/identification_node/identification.o: src/identification_node/identification.cpp.o
 
@@ -1372,9 +1444,10 @@ src/utilities.o: src/utilities.cpp.o
 src/utilities.cpp.o:
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/simuBoat.dir/build.make SailBoatROS/sailrobot/CMakeFiles/simuBoat.dir/src/utilities.cpp.o
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/user_test.dir/build.make SailBoatROS/sailrobot/CMakeFiles/user_test.dir/src/utilities.cpp.o
-	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/line_following.dir/build.make SailBoatROS/sailrobot/CMakeFiles/line_following.dir/src/utilities.cpp.o
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/logger.dir/build.make SailBoatROS/sailrobot/CMakeFiles/logger.dir/src/utilities.cpp.o
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/transform_broadcaster.dir/build.make SailBoatROS/sailrobot/CMakeFiles/transform_broadcaster.dir/src/utilities.cpp.o
+	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/line_following.dir/build.make SailBoatROS/sailrobot/CMakeFiles/line_following.dir/src/utilities.cpp.o
+	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/build.make SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/src/utilities.cpp.o
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/line_following_long.dir/build.make SailBoatROS/sailrobot/CMakeFiles/line_following_long.dir/src/utilities.cpp.o
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/potential_field.dir/build.make SailBoatROS/sailrobot/CMakeFiles/potential_field.dir/src/utilities.cpp.o
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/waypoint_follower.dir/build.make SailBoatROS/sailrobot/CMakeFiles/waypoint_follower.dir/src/utilities.cpp.o
@@ -1394,9 +1467,10 @@ src/utilities.i: src/utilities.cpp.i
 src/utilities.cpp.i:
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/simuBoat.dir/build.make SailBoatROS/sailrobot/CMakeFiles/simuBoat.dir/src/utilities.cpp.i
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/user_test.dir/build.make SailBoatROS/sailrobot/CMakeFiles/user_test.dir/src/utilities.cpp.i
-	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/line_following.dir/build.make SailBoatROS/sailrobot/CMakeFiles/line_following.dir/src/utilities.cpp.i
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/logger.dir/build.make SailBoatROS/sailrobot/CMakeFiles/logger.dir/src/utilities.cpp.i
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/transform_broadcaster.dir/build.make SailBoatROS/sailrobot/CMakeFiles/transform_broadcaster.dir/src/utilities.cpp.i
+	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/line_following.dir/build.make SailBoatROS/sailrobot/CMakeFiles/line_following.dir/src/utilities.cpp.i
+	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/build.make SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/src/utilities.cpp.i
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/line_following_long.dir/build.make SailBoatROS/sailrobot/CMakeFiles/line_following_long.dir/src/utilities.cpp.i
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/potential_field.dir/build.make SailBoatROS/sailrobot/CMakeFiles/potential_field.dir/src/utilities.cpp.i
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/waypoint_follower.dir/build.make SailBoatROS/sailrobot/CMakeFiles/waypoint_follower.dir/src/utilities.cpp.i
@@ -1416,9 +1490,10 @@ src/utilities.s: src/utilities.cpp.s
 src/utilities.cpp.s:
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/simuBoat.dir/build.make SailBoatROS/sailrobot/CMakeFiles/simuBoat.dir/src/utilities.cpp.s
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/user_test.dir/build.make SailBoatROS/sailrobot/CMakeFiles/user_test.dir/src/utilities.cpp.s
-	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/line_following.dir/build.make SailBoatROS/sailrobot/CMakeFiles/line_following.dir/src/utilities.cpp.s
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/logger.dir/build.make SailBoatROS/sailrobot/CMakeFiles/logger.dir/src/utilities.cpp.s
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/transform_broadcaster.dir/build.make SailBoatROS/sailrobot/CMakeFiles/transform_broadcaster.dir/src/utilities.cpp.s
+	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/line_following.dir/build.make SailBoatROS/sailrobot/CMakeFiles/line_following.dir/src/utilities.cpp.s
+	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/build.make SailBoatROS/sailrobot/CMakeFiles/data_collector.dir/src/utilities.cpp.s
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/line_following_long.dir/build.make SailBoatROS/sailrobot/CMakeFiles/line_following_long.dir/src/utilities.cpp.s
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/potential_field.dir/build.make SailBoatROS/sailrobot/CMakeFiles/potential_field.dir/src/utilities.cpp.s
 	cd /home/sailboat/catkin_ws/build && $(MAKE) -f SailBoatROS/sailrobot/CMakeFiles/waypoint_follower.dir/build.make SailBoatROS/sailrobot/CMakeFiles/waypoint_follower.dir/src/utilities.cpp.s
@@ -1492,6 +1567,7 @@ help:
 	@echo "... depend"
 	@echo "... install/local"
 	@echo "... install"
+	@echo "... edit_cache"
 	@echo "... actionlib_generate_messages_py"
 	@echo "... actionlib_generate_messages_lisp"
 	@echo "... simuBoat"
@@ -1504,15 +1580,15 @@ help:
 	@echo "... tf_generate_messages_nodejs"
 	@echo "... user_test"
 	@echo "... visualization_msgs_generate_messages_cpp"
-	@echo "... line_following"
 	@echo "... logger"
 	@echo "... tf_generate_messages_lisp"
 	@echo "... tf2_msgs_generate_messages_eus"
 	@echo "... transform_broadcaster"
-	@echo "... edit_cache"
 	@echo "... visualization_msgs_generate_messages_py"
 	@echo "... visualization_msgs_generate_messages_lisp"
 	@echo "... visualization_msgs_generate_messages_nodejs"
+	@echo "... line_following"
+	@echo "... data_collector"
 	@echo "... tf2_msgs_generate_messages_cpp"
 	@echo "... line_following_long"
 	@echo "... install/strip"
@@ -1540,6 +1616,12 @@ help:
 	@echo "... src/controller.o"
 	@echo "... src/controller.i"
 	@echo "... src/controller.s"
+	@echo "... src/data_collector_node/data_collector.o"
+	@echo "... src/data_collector_node/data_collector.i"
+	@echo "... src/data_collector_node/data_collector.s"
+	@echo "... src/data_collector_node/data_collector_node.o"
+	@echo "... src/data_collector_node/data_collector_node.i"
+	@echo "... src/data_collector_node/data_collector_node.s"
 	@echo "... src/identification_node/identification.o"
 	@echo "... src/identification_node/identification.i"
 	@echo "... src/identification_node/identification.s"
