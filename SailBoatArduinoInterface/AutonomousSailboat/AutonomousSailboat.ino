@@ -158,7 +158,7 @@ void loop() {
   Logger::Instance()->Update();
   Sailboat::Instance()->communicateData();
   Sailboat::Instance()->Control();
-  Sailboat::Instance()->publishMsg(String("Sailboat is looping"));
+  //Sailboat::Instance()->publishMsg("Looping");
 
 
   nh.spinOnce();
