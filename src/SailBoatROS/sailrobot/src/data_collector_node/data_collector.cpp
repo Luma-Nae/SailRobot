@@ -11,6 +11,8 @@ using namespace glm;
 
 double PI = 3.141592653589793238462643383279502884;
 
+// This is a test for github 2
+
 void DataCollector::setup(ros::NodeHandle* n){
 
 }
