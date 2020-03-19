@@ -1,8 +1,6 @@
 #include "ReturnHome.h"
 #include <Sailboat.h>
 
-// hi it's bastian
-
 ReturnHome::ReturnHome():ControllerInterface(5000),q(1){
 }
 void ReturnHome::init() {
