@@ -27,5 +27,5 @@ void DataCollector::printIMU() {
     std::string ex =  std::to_string(heading[0]*10*(180/PI));
     std::string ey =  std::to_string(heading[1]*10*(180/PI));
     std::string ez =  std::to_string(heading[2]*10*(180/PI));
-    std::cout << "X: " << ex << ",  Y: " << ey << ",  Z: " << ez << "this is a test" << std::endl;
+    std::cout << "X: " << ex << ",  Y: " << ey << ",  Z: " << ez << "this is a test 1" << std::endl;
 }
