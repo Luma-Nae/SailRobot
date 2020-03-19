@@ -12,7 +12,7 @@ using namespace glm;
 double PI = 3.141592653589793238462643383279502884;
 
 void DataCollector::setup(ros::NodeHandle* n){
-    gfdgssdf
+    
 }
 
 geometry_msgs::Twist DataCollector::control(){
