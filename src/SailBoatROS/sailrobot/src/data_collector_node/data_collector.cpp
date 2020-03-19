@@ -12,12 +12,7 @@ using namespace glm;
 double PI = 3.141592653589793238462643383279502884;
 
 void DataCollector::setup(ros::NodeHandle* n){
-    //ofstream outfile;
-    //outfile.open("path to file");
-
-    //outfile << "testing" << endl;
-
-    //outfile.close();
+    gfdgssdf
 }
 
 geometry_msgs::Twist DataCollector::control(){
