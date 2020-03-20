@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
     res.sendfile('sailrobot_data_display.html');
 })
  
- http.listen(3000, function() {
+ http.listen(port, function() {
     console.log('listening on *:3000');
  });
 
