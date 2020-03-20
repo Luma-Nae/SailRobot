@@ -11,7 +11,7 @@ app.get('/', function (req, res) {
 })
  
  http.listen(port, function() {
-    console.log('listening on *:3000');
+    console.log('listening on *:' + port);
  });
 
  fs.watch(dataFile, (event, filename) => {
