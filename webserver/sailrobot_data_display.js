@@ -3,7 +3,7 @@ const http = require('http').Server(app);
 const io = require('socket.io')(http);
 const fs = require("fs");
 
-const port = 3000
+const port = 8080
 const dataFile = 'sailrobot_data.csv'
 
 app.get('/', function (req, res) {
