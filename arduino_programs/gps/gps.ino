@@ -1,13 +1,28 @@
-#include <Adafruit_GPS.h>
+// what's the name of the hardware serial port?
+#define GPSSerial Serial1
 
 
 void setup() {
-    pinMode(LED_BUILTIN, OUTPUT);
+  // wait for hardware serial to appear
+  while (!Serial);
+
+  // make this baud rate fast enough to we aren't waiting on it
+  Serial.begin(115200);
+
+  // 9600 baud is the default rate for the Ultimate GPS
+  GPSSerial.begin(9600);
 }
 
+
 void loop() {
-    digitalWrite(LED_BUILTIN, HIGH);
-    delay(1000);
-    digitalWrite(LED_BUILTIN, LOW);
-    delay(1000);
+Serial.println(Serial.available());
+  if (Serial.available()) {
+    char c = Serial.read();
+    GPSSerial.write(c);
+  }
+  if (GPSSerial.available()) {
+    char c = GPSSerial.read();
+    Serial.write(c);
+  }
+delay(200);
 }
