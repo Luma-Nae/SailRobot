@@ -52,7 +52,11 @@ bool Data_logger::loopUnpublished() {
 geometry_msgs::Twist Data_logger::control() {
     geometry_msgs::Twist cmd;
 
-    cmd.angular.x = 1;
+	int input;
+	std::cin >> input;
+
+
+    cmd.angular.x = input;
 
 
 
