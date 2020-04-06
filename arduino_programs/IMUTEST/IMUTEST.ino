@@ -6,6 +6,6 @@ void setup() {
 
 
 void loop() {
-    Serial.print("test and test\n")
+    Serial.print("test and test\n");
     delay(500);
 }
